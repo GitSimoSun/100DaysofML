@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="assets/2103656.png">
+	<title>Probability Calculator</title>
+	<script type="text/javascript" src="/eel.js"></script>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <h1>Distribution Chart Generator</h1>
+
+    <label for="distribution-select">Select Distribution:</label>
+    <select id="distribution-select" name="distribution-select">
+        <option value="">Select...</option>	
+    </select>
+
+    <div id="distribution-description" style="display:none;">
+        <h2>Description</h2>
+        <p id="distribution-desc-text"></p>
+        <div id="distribution-properties">
+            <p id="distribution-mean"></p>
+            <p id="distribution-variance"></p>
+        </div>
+    </div>
+
+
+    <div id="parameters-form" style="display:none;">
+        <h2>Enter Parameters</h2>
+        <form id="distribution-form"></form>
+    </div>
+
+    <div id="compute-form-container" style="display:none;">
+        <h2>Compute Probability</h2>
+        <form id="compute-form">
+            <div class="form-group">
+                <label for="computeValue">Enter Value to Compute:</label>
+                <input type="text" id="computeValue" name="computeValue">
+            </div>
+            <button id="computeButton" type="submit">Compute Probability</button>
+        </form>
+    </div>
+
+    <div id="results" style="display:none;">
+        <h4 style="display: inline;">Result: </h4>
+        <span id="computed-result" style="display: inline;"></span>
+    </div>
+
+    <div id="chart-container" style="display:none;">
+        <canvas id="chart"></canvas>
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>

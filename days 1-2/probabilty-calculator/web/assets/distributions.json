@@ -1,0 +1,252 @@
+{
+  "Binomial": {
+    "description": "The binomial distribution represents the number of successes in a fixed number of independent Bernoulli trials, each with the same probability of success.",
+    "variable_type": "discrete",
+    "parameters": {
+      "n": {
+        "description": "The number of trials.",
+        "type": "integer"
+      },
+      "p": {
+        "description": "The probability of success in each trial.",
+        "type": "float",
+        "range": [0, 1]
+      }
+    },
+    "properties": {
+      "mean": "E[X] = n \\cdot p",
+      "variance": "Var(X) = n \\cdot p \\cdot (1 - p)"
+    }
+  },
+  "Geometric": {
+    "description": "The geometric distribution models the number of trials until the first success in a series of independent Bernoulli trials, each with the same probability of success.",
+    "variable_type": "discrete",
+    "parameters": {
+      "p": {
+        "description": "The probability of success in each trial.",
+        "type": "float",
+        "range": [0, 1]
+      }
+    },
+    "properties": {
+      "mean": "E[X] = \\frac{1}{p}",
+      "variance": "Var(X) = \\frac{1 - p}{p^2}"
+    }
+  },
+  "Negative Geometric": {
+    "description": "The negative geometric distribution models the number of failures until the k-th success in a sequence of independent and identically distributed Bernoulli trials.",
+    "variable_type": "discrete",
+    "parameters": {
+      "p": {
+        "description": "The probability of success in each trial.",
+        "type": "float",
+        "range": [0, 1]
+      },
+      "r": {
+        "description": "The number of successes.",
+        "type": "integer"
+      }
+    },
+    "properties": {
+      "mean": "E[X] = \\frac{r}{p}",
+      "variance": "Var(X) = \\frac{r \\cdot (1 - p)}{p^2}"
+    }
+  },
+  "Poisson": {
+    "description": "The Poisson distribution models the number of events occurring in a fixed interval of time or space, given that the events occur with a constant rate and independently of the time since the last event.",
+    "variable_type": "discrete",
+    "parameters": {
+      "lambda": {
+        "description": "The rate (expected number of occurrences) of events per interval.",
+        "type": "float",
+        "range": [0, "infinity"]
+      }
+    },
+    "properties": {
+      "mean": "E[X] = \\lambda",
+      "variance": "Var(X) = \\lambda"
+    }
+  },
+  "Normal": {
+    "description": "The normal distribution is a continuous probability distribution defined by its mean and variance, often used to model naturally occurring phenomena.",
+    "variable_type": "continuous",
+    "parameters": {
+      "mu": {
+        "description": "The mean or expectation of the distribution.",
+        "type": "float"
+      },
+      "sigma_squared": {
+        "description": "The variance of the distribution.",
+        "type": "float",
+        "range": [0, "infinity"]
+      }
+    },
+    "properties": {
+      "mean": "E[X] = \\mu",
+      "variance": "Var(X) = \\sigma^2"
+    }
+  },
+  "Hypergeometric": {
+    "description": "The hypergeometric distribution models the probability of k successes in n draws from a population without replacement.",
+    "variable_type": "discrete",
+    "parameters": {
+      "N": {
+        "description": "The population size.",
+        "type": "integer"
+      },
+      "m": {
+        "description": "The number of successes in the population.",
+        "type": "integer"
+      },
+      "n": {
+        "description": "The number of draws.",
+        "type": "integer"
+      }
+    },
+    "properties": {
+      "mean": "E[X] = n \\cdot \\frac{m}{N}",
+      "variance": "Var(X) = n \\cdot \\frac{m}{N} \\cdot \\frac{(N - m)}{N} \\cdot \\frac{(N - n)}{(N - 1)}"
+    }
+  },
+  "Exponential": {
+    "description": "The exponential distribution models the time between events in a Poisson process, where events occur continuously and independently at a constant average rate.",
+    "variable_type": "continuous",
+    "parameters": {
+      "lambda": {
+        "description": "The rate (or inverse of the mean) of the distribution.",
+        "type": "float",
+        "range": [0, "infinity"]
+      }
+    },
+    "properties": {
+      "mean": "E[X] = \\frac{1}{\\lambda}",
+      "variance": "Var(X) = \\frac{1}{\\lambda^2}"
+    }
+  },
+  "Gamma": {
+    "description": "The gamma distribution is a continuous distribution that generalizes the exponential distribution and models the time until the k-th event in a Poisson process.",
+    "variable_type": "continuous",
+    "parameters": {
+      "k": {
+        "description": "Shape parameter (number of events).",
+        "type": "integer"
+      },
+      "lambda": {
+        "description": "Rate parameter (reciprocal of the scale).",
+        "type": "float",
+        "range": [0, "infinity"]
+      }
+    },
+    "properties": {
+      "mean": "E[X] = \\frac{k}{\\lambda}",
+      "variance": "Var(X) = \\frac{k}{\\lambda^2}"
+    }
+  },
+  "Beta": {
+    "description": "The beta distribution is a continuous distribution defined on the interval [0, 1] and is often used to model the distribution of probabilities.",
+    "variable_type": "continuous",
+    "parameters": {
+      "alpha": {
+        "description": "Shape parameter alpha.",
+        "type": "integer",
+        "range": [1, "infinity"]
+      },
+      "beta": {
+        "description": "Shape parameter beta.",
+        "type": "integer",
+        "range": [1, "infinity"]
+      }
+    },
+    "properties": {
+      "mean": "E[X] = \\frac{\\alpha}{\\alpha + \\beta}",
+      "variance": "Var(X) = \\frac{\\alpha \\cdot \\beta}{(\\alpha + \\beta)^2 \\cdot (\\alpha + \\beta + 1)}"
+    }
+  },
+  "Cauchy": {
+    "description": "The Cauchy distribution is a continuous distribution that arises in the theory of resonance. It has undefined mean and variance.",
+    "variable_type": "continuous",
+    "parameters": {
+      "theta": {
+        "description": "Angle parameter",
+        "type": "float",
+        "range": ["-infinity", "infinity"]
+      }
+    }
+  },
+  "Weibull": {
+    "description": "The Weibull distribution is a continuous distribution used to model the life expectancy of objects.",
+    "variable_type": "continuous",
+    "parameters": {
+      "lambda": {
+        "description": "Scale parameter.",
+        "type": "float",
+        "range": [0, "infinity"]
+      },
+      "k": {
+        "description": "Shape parameter.",
+        "type": "float",
+        "range": [0, "infinity"]
+      }
+    },
+    "properties": {
+      "mean": "E[X] = \\lambda \\cdot \\Gamma\\left(1 + \\frac{1}{k}\\right)",
+      "variance": "Var(X) = \\lambda^2 \\left(\\Gamma\\left(1 + \\frac{2}{k}\\right) - \\left(\\Gamma\\left(1 + \\frac{1}{k}\\right)\\right)^2\\right)"
+    }
+  },
+  "Pareto": {
+    "description": "The Pareto distribution is a continuous distribution used in economics to describe the distribution of wealth.",
+    "variable_type": "continuous",
+    "parameters": {
+      "a": {
+        "description": "Scale parameter (minimum value).",
+        "type": "float",
+        "range": [0, "infinity"]
+      },
+      "lambda": {
+        "description": "Shape parameter.",
+        "type": "float",
+        "range": [0, "infinity"]
+      }
+    },
+    "properties": {
+      "mean": "E[X] = \\frac{\\lambda \\cdot a}{\\lambda - 1}, \\text{ for } \\lambda > 1",
+      "variance": "Var(X) = \\frac{\\lambda \\cdot a^2}{(\\lambda - 1)^2 \\cdot (\\lambda - 2)}, \\text{ for } \\lambda > 2"
+    }
+  },
+  "Uniform Discrete": {
+    "description": "The uniform discrete distribution assigns equal probability to each of the integers in the range [a, b].",
+    "variable_type": "discrete",
+    "parameters": {
+      "a": {
+        "description": "Lower bound (integer).",
+        "type": "integer"
+      },
+      "b": {
+        "description": "Upper bound (integer).",
+        "type": "integer"
+      }
+    },
+    "properties": {
+      "mean": "E[X] = \\frac{a + b}{2}",
+      "variance": "Var(X) = \\frac{(b - a + 1)^2 - 1}{12}"
+    }
+  },
+  "Uniform Continuous": {
+    "description": "The uniform continuous distribution assigns equal probability to any value in the continuous range [a, b].",
+    "variable_type": "continuous",
+    "parameters": {
+      "a": {
+        "description": "Lower bound (real number).",
+        "type": "float"
+      },
+      "b": {
+        "description": "Upper bound (real number).",
+        "type": "float"
+      }
+    },
+    "properties": {
+      "mean": "E[X] = \\frac{a + b}{2}",
+      "variance": "Var(X) = \\frac{(b - a)^2}{12}"
+    }
+  }
+}

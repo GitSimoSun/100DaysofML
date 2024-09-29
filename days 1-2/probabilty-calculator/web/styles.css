@@ -1,0 +1,121 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100%;
+    background-color: #f4f4f9;
+}
+
+h1 {
+    font-size: 28px;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 22px;
+    margin: 15px 0;
+}
+
+label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+select,
+input,
+button {
+    font-size: 16px;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%; /* Wider form containers */
+    margin: 20px 0;
+}
+
+input,
+button {
+    width: 100%; /* Full-width inputs and buttons */
+}
+
+button {
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Wider parameters form */
+#parameters-form, #compute-form-container {
+    width: 60%;
+}
+
+/* Results and Chart */
+#results {
+    font-size: 18px;
+    margin-top: 2px;
+}
+
+#chart-container {
+    width: 80%;
+    max-width: 800px;
+    margin-top: 25px;
+}
+
+canvas {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Flexbox Styling for Form Elements */
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.form-group > label {
+    flex: 1;
+    text-align: right;
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+.form-group > input {
+    flex: 2;
+    padding: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+
+.distribution-description {
+    display: block;
+    max-width: 60%;
+}
+
+
+#distribution-properties {
+    display: flex;
+    justify-content: space-around;
+}
