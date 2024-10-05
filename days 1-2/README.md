@@ -32,4 +32,4 @@ For more information about the distributions implemented in this project, I've t
 - **Properties** like the mean, variance, skewness, and moments.
 - **Applications** in real-world scenarios.
 
-https://drive.google.com/file/d/1TlSi2p8wNxGrSIwz3Kk4IrzxcrtSO3ky/view?usp=drive_link
+[https://drive.google.com/file/d/1TlSi2p8wNxGrSIwz3Kk4IrzxcrtSO3ky/view?usp=drive_link](https://drive.google.com/file/d/1sFOvhg6CwKeywNlrHeJJEEk7qpJ_KA3G/view?usp=sharing)
